@@ -21,7 +21,7 @@ public class Kitchen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToMany(mappedBy = "kitchen")
-//    private List<Order> order;
+    @OneToMany(mappedBy = "kitchen")
+    private List<Order> order;
 
 }

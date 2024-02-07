@@ -24,7 +24,7 @@ public class Administrator {
     private String name;
     private String role;
 
-//    @OneToMany(mappedBy = "admin")
-//    private List<Order> orders;
+    @OneToMany(mappedBy = "admin")
+    private List<Order> orders;
 
 }

@@ -20,13 +20,13 @@ public class DishHasOrder {
 
     private Long id;
 
-//    @ManyToOne
-//    @JoinColumn(name = "product_id")
-//    private Dishes _dishes;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "order_id")
-//    private Order _order;
-//
-//    private int quantity;
+    @ManyToOne
+    @JoinColumn(name = "dishes_id")
+    private Dishes _dishes;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order _order;
+
+    private int quantity;
 }

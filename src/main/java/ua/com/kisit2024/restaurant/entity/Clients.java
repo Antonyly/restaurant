@@ -30,13 +30,13 @@ public class Clients {
     private String email;
     private int phone;
 
-//    @OneToOne
-//    @MapsId
-//    @MapKey
-//    @JoinColumn(name = "id")
-//    private Users user;
-//
-//    @OneToMany(mappedBy = "client")
-//    private Set<Order> orders;
+    @OneToOne
+    @MapsId
+    @MapKey
+    @JoinColumn(name = "id")
+    private Users user;
+
+    @OneToMany(mappedBy = "client")
+    private Set<Order> orders;
 
 }

@@ -29,20 +29,20 @@ public class Order {
     private String delivery;
     private String payment;
 
-//    @ManyToOne
-//    @JoinColumn(name = "client_id")
-//    private Clients client;
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private Clients client;
+
+    @OneToMany(mappedBy = "_order")
+    private List<DishHasOrder> dishHasOrders;
+
+    @ManyToOne
+    @JoinColumn(name = "admin_id")
+    private Administrator admin;
 //
-//    @OneToMany(mappedBy = "order")
-//    private List<Order> orderList;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "admin_id")
-//    private Administrator admin;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "kitchen_id")
-//    private Kitchen kitchen;
+    @ManyToOne
+    @JoinColumn(name = "kitchen_id")
+    private Kitchen kitchen;
 
 
 }

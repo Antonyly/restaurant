@@ -25,17 +25,16 @@ public class Dishes {
     private String price;
     private String image;
 
-//    @ManyToOne
-//    @JoinColumn(name = "category_id")
-//    private Category category;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "menu_id")
-//    private Menu menu;
-//
-//    @OneToMany(mappedBy = "dishes")
-//    private List<DishHasOrder> dishHasOrders;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category categories;
 
-    // Constructors, getters, and setters
+    @ManyToOne
+    @JoinColumn(name = "menu_id")
+    private Menu _menu;
+
+    @OneToMany(mappedBy = "_dishes")
+    private List<DishHasOrder> dishHasOrders;
+
 }
 

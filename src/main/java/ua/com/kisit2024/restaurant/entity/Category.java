@@ -25,11 +25,11 @@ public class Category {
     private String description;
     private String image;
 
-//    @OneToMany(mappedBy = "categories")
-//    private List<Dishes> dishesList;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "_category")
-//    private Menu menuHasCategory;
+    @OneToMany(mappedBy = "categories")
+    private List<Dishes> dishesList;
+
+    @ManyToOne
+    @JoinColumn(name = "_category")
+    private Menu menuHasCategory;
 
 }

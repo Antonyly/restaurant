@@ -21,11 +21,11 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToMany(mappedBy = "menuHasCategory")
-//    private List<Category> categoryList;
+    @OneToMany(mappedBy = "menuHasCategory")
+    private List<Category> categoryList;
 
-//    @OneToMany(mappedBy = "menu")
-//    private List<Dishes> dishesList;
+    @OneToMany(mappedBy = "_menu")
+    private List<Dishes> dishesList;
 
 
 }
