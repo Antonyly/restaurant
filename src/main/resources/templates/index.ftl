@@ -2,7 +2,7 @@
 
 <@p.pages>
 
-<#--    <h2>${hello}</h2>-->
+    <h2>${hello}</h2>
 
 <#--    <div class="header__container container">-->
 <#--        <a class="logo link" href="./index.html"><span class="logo-site">Web</span>Studio</a>-->
