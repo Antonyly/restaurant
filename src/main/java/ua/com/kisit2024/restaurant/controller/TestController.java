@@ -15,5 +15,14 @@ public class TestController {
         model.addAttribute("hello", "Hi BROOOOOOO");
         return "index";
     }
+    @GetMapping("/payment")
+    public  String getPaymentPage() {
+        return "payment";
+    };
+
+    @GetMapping("/delivery")
+    public String getDeliveryPage(){
+        return "delivery";
+    };
 
 }
