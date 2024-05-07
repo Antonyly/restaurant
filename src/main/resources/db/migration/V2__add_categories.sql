@@ -1,2 +1,2 @@
-INSERT INTO `category` (`description`, `image`, `name`) VALUES ('Найсмачніша піца пеппероніііі', '/static/images/peperoni.jpg', 'пепероні');
+INSERT INTO `category` (`description`, `image`, `name`) VALUES ('Найсмачніша піца пепперонііі', '/static/images/pepperoni.jpg', 'Пепероні');
 INSERT INTO `category` (`description`, `image`, `name`) VALUES ('Макенчіс власної персони', '/static/images/frittata.jpg', 'макочінаааа');
