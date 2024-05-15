@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Setter
@@ -22,7 +23,7 @@ public class Dishes {
     private Long id;
     private String name;
     private String description;
-    private String price;
+    private BigDecimal price;
     private String image;
 
     @ManyToOne

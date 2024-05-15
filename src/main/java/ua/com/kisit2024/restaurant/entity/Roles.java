@@ -21,6 +21,11 @@ public class Roles {
     private String name;
     private String role;
 
+    public Roles(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Transient
     @ManyToMany(mappedBy = "rolesset")
     private Set<Users> usersset;

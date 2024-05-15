@@ -13,8 +13,12 @@
         <#include "header.ftl">
         <#include "mobileMenu.ftl">
     </header>
-
-
+<#--    <div>-->
+<#--        <#nested >-->
+<#--    </div>-->
+<#--    <div class="dishes">-->
+<#--        <#include "../category.ftl">-->
+<#--    </div>-->
 
     <div>
         <#nested >

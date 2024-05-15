@@ -46,7 +46,7 @@ create table dishes
     description varchar(255),
     image       varchar(255),
     name        varchar(255),
-    price       varchar(255),
+    price       DECIMAL(10,2),
     menu_id     bigint,
     category_id bigint,
     primary key (id)

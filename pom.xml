@@ -66,6 +66,12 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.31</version> <!-- Остання версія, яка була на момент написання -->
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>8.0.1.Final</version>
+		</dependency>
+
 
 	</dependencies>
 

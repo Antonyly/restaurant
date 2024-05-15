@@ -1,6 +1,7 @@
 package ua.com.kisit2024.restaurant.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +24,11 @@ public class Clients {
     private Long id;
 
     @Column(name = "first_name")
-    private String name;
+    private String username;
     @Column(name = "last_name")
     private String lastname;
 
+//    @Email
     private String email;
     private int phone;
 
