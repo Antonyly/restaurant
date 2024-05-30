@@ -3,14 +3,14 @@
 
     <h1> Order </h1>
 
-    <h2> Інформація про користувача</h2>
+    <h2>User name</h2>
     <table class="table">
 
         <thead>
         <tr>
-            <th>Ім'я</th>
-            <th>Прізвище</th>
-            <th>Телефон</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone number</th>
             <th>Email</th>
         </tr>
         </thead>
@@ -29,9 +29,9 @@
     </table>
 
 
-    <h2> Інформація про замовлення </h2>
+    <h2> Order information </h2>
 
-    <table class="table">
+    <table>
 
         <thead>
         <tr>
@@ -51,7 +51,7 @@
                     <tr>
                         <td><img src="${item.dish.image}" alt="${item.dish.name}" height="30px"></td>
                         <td>${item.dish.name}</td>
-                        <td>${item.quantity}</td>
+                        <td>${item.quant}</td>
                         <td>${item.dish.price}</td>
                         <td>${item.dish.price * item.quantity}</td>
                     </tr>
@@ -61,25 +61,25 @@
         </tbody>
     </table>
 
-    <p> Варість замовлення : ${total} </p>
-    <p> Кількість асотиментних позицій у замовленні: ${el}</p>
+    <p> The cost of the order: ${total} </p>
+    <p> Number of associated items in the order: ${el}</p>
 
 
     <form action="/buy" method="post">
-        <h2> Вибір способу оплати </h2>
+        <h2> Choosing a payment method </h2>
         <select name="payment">
-            <option value="1">Готівка</option>
-            <option value="2">Банківська карта</option>
+            <option value="1">By cash</option>
+            <option value="2">By card</option>
         </select>
 
-        <h2> Вибір способу доставки </h2>
+        <h2> Choosing a delivery method </h2>
         <select name="delivery">
-            <option value="1">Самовивіз</option>
-            <option value="2">Нова пошта</option>
-            <option value="3">Укрпошта</option>
+            <option value="1">Self-delivery</option>
+            <option value="2">Nova Post</option>
+            <option value="3">Ukrposhta</option>
         </select>
 
-        <button type="submit">Підтведити замовлення</button>
+        <button type="submit">Confirm your order</button>
     </form>
 
 

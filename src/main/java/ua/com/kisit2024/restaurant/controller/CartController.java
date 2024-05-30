@@ -144,6 +144,61 @@ public class CartController {
         return "cart";
     }
 
+//    @PostMapping("/buy")
+//    public String buyProduct(@RequestParam(name = "delivery") String deliveryId,
+//                             @RequestParam(name = "payment") String paymentId,
+//                             HttpServletRequest request
+//    ) {
+//
+//        String delivery = (deliveryId.equals("1")) ? "Готівка" : "Банківська карта";
+//
+//        String payment = "";
+//        if (paymentId.equals("1")) {
+//            payment = "Самовивіз";
+//        } else if (paymentId.equals("2")) {
+//            payment = "Нова пошта";
+//        } else {
+//            payment = "Укрпошта";
+//        }
+//
+//        HttpSession session = request.getSession();
+//
+//        Cart cart = (Cart) session.getAttribute("cart");
+//
+//        if (cart == null) {
+//            return "redirect:/category";
+//        }
+//
+//        Long clientId = (Long) session.getAttribute("user");
+//
+//        if (clientId != null) {
+//
+//            Clients client = userService.getClientById(clientId);
+//
+//            Order order = new Order();
+//            order.setDelivery(delivery);
+//            order.setPayment(payment);
+//            order.setDateCreated(new Date());
+//            order.setCliente(client);
+//            order.setStatus(false);
+//
+//            Order order1 = orderService.saveNewOrderForClient(order);
+//
+//            for (ItemCart el : cart.getCart()) {
+//                productHasOrderRepository.save(new ProductHasOrder(el.getProduct(), el.getQuantity(), order1));
+//            }
+//
+//            return "redirect:/thank";
+//        } else {
+//            return "redirect:/category";
+//        }
+//    }
+//
+//
+//    @GetMapping("/thank")
+//    public String getPageThank() {
+//        return "thank";
+//    }
 
 
 

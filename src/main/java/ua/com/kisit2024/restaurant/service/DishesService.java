@@ -1,5 +1,6 @@
 package ua.com.kisit2024.restaurant.service;
 
+import jakarta.persistence.Cacheable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ua.com.kisit2024.restaurant.entity.Category;
@@ -16,6 +17,14 @@ public class DishesService {
 
     public List<Dishes> getDishesByCategory(Category category){
         return dishesRepository.findAllByCategories(category);
+    }
+    public List<Product> getProductsByName(String name){
+        return  productRepository.findAllByNameContainsIgnoreCaseOrderByName(name);
+    }
+
+    @Cacheable(value = {"productByCategoryId"}, key = "#category.id  + '_' + #pageable.pageNumber")
+    public Page<Product> getPageProducts(Pageable pageable, Category category){
+        return productRepository.findAllByCategories(pageable, category);
     }
 
 }
