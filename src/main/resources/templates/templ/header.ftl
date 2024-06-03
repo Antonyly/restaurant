@@ -1,5 +1,5 @@
 <div class="header__container container">
-    <a class="logo link" href="./index"><span class="logo-site">L'Angolo</span>Magico</a>
+    <a class="logo link" href="/"><span class="logo-site">L'Angolo</span>Magico</a>
     <nav class="navigation">
         <ul class="nav-list list">
             <li class="nav-list__item"> <a class="nav-list__link link nav-list__link_current" href="/">Main page</a>

@@ -1,6 +1,8 @@
 package ua.com.kisit2024.restaurant.service;
 
 import org.springframework.stereotype.Service;
+import ua.com.kisit2024.restaurant.entity.Order;
+import ua.com.kisit2024.restaurant.repository.OrderRepository;
 
 @Service
 public class OrderService {

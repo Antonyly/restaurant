@@ -7,6 +7,7 @@ import ua.com.kisit2024.restaurant.entity.Category;
 import ua.com.kisit2024.restaurant.entity.Dishes;
 import ua.com.kisit2024.restaurant.repository.DishesRepository;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 @Service
@@ -18,13 +19,8 @@ public class DishesService {
     public List<Dishes> getDishesByCategory(Category category){
         return dishesRepository.findAllByCategories(category);
     }
-    public List<Product> getProductsByName(String name){
-        return  productRepository.findAllByNameContainsIgnoreCaseOrderByName(name);
-    }
-
-    @Cacheable(value = {"productByCategoryId"}, key = "#category.id  + '_' + #pageable.pageNumber")
-    public Page<Product> getPageProducts(Pageable pageable, Category category){
-        return productRepository.findAllByCategories(pageable, category);
-    }
+//    public List<Dishes> getProducByName(String name){
+//        return  dishesRepository.findAllByCategories(name);
+//    }
 
 }

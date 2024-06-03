@@ -54,24 +54,15 @@ public class UserController {
         if (userService.getLogicByUsername(user.getUsername())){
             return "redirect:/registration";
         }
-
-
         user.setRolesset(Collections.singleton(new Roles(1L, "ROLE_User")));
+
         // User (+id) = save User to Db
-
         Users user1 = userService.saveNewUserToDB(user);
-
-
-        // Client.setUser(user);
 
         client.setUser(user1);
         // Save Client
         userService.saveNewClientToDB(client);
-
-
-
         return "redirect:/login";
-
     }
 
     @GetMapping("/login")
@@ -79,26 +70,25 @@ public class UserController {
         return "login";
     }
 
-    @PostMapping("/login")
-    public String getAuth(@RequestParam(name = "username") String username,
-                          @RequestParam(name = "password") String password,
-                          HttpServletRequest request
-    ) {
-        if(userService.getLogicByUsernameAndPassword(username, password)){
-            return "redirect:/registration";
-        } else {
-            HttpSession session = request.getSession();
-
-            Users user = userService.getUserByUsername(username);
-
-            session.setAttribute("user", user.getId());
-
-
-
-            return "redirect:/order";
-        }
-
-
+@PostMapping("/login")
+public String getAuth(@RequestParam(name = "username") String username,
+                      @RequestParam(name = "password") String password,
+                      HttpServletRequest request
+) {
+    if(userService.getLogicByUsernameAndPassword(username, password)){
+        HttpSession session = request.getSession();
+        Users user = userService.getUserByUsername(username);
+        session.setAttribute("user", user.getId());
+        return "redirect:/user";
+    } else {
+        return "redirect:/login?error";
+    }
+}
+    @GetMapping("/user")
+    public String getUserPage() {
+        return "user";
     }
 
 }
+
+
